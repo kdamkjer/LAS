@@ -137,9 +137,9 @@ preamble = r'''
 
 # Assign 'report' to 'manual' documentclass.
 # Override as needed.
-latex_docclass = {
-    'manual': 'report'
-}
+# latex_docclass = {
+    # 'manual': 'report'
+# }
 
 latex_elements = {
     # The paper size ('letterpaper' or 'a4paper').
