@@ -61,7 +61,7 @@ myversion = u'1.4 - R13'
 release = u'VERSION ' + myversion
 releasename = release
 version=''
-today='15 July 2013'
+today=r'Approved:\\November 2011\\\\Updated:\\15 July 2013'
 
 
 
