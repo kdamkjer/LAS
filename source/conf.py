@@ -135,12 +135,17 @@ preamble = r'''
     \renewcommand{\headrulewidth}{1pt}
     \renewcommand{\footrulewidth}{1pt}
 }
+
+\protected\def\sphinxstylethead{\textbf}
+
 \makeatother
 
 \usepackage{enumitem}
 \setlist{noitemsep}
 
 '''.replace("VVVV", u'v.' + myversion)
+
+
 
 # Assign 'report' to 'manual' documentclass. Override as needed.
 #latex_docclass = {
