@@ -3,6 +3,7 @@
 sha=$(git rev-parse HEAD)
 
 base="LAS-specification-$sha.pdf"
+basetex="LAS-specification-$sha.tex"
 
 filename="build/latex/$base"
 
@@ -12,3 +13,6 @@ docker run -e "AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY" -e "AWS_ACCESS_KEY_
 
 echo "File uploaded to https://s3.amazonaws.com/asprs-las/$base"
 
+docker run -e "AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY" -e "AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID" -v $TRAVIS_BUILD_DIR:/data -w /data asprsorg/las aws s3 cp /data/build/latex/LAS.tex s3://asprs-las/$basetex --acl public-read --region us-east-1
+
+echo "File uploaded to https://s3.amazonaws.com/asprs-las/$basetex"
